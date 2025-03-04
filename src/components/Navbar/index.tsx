@@ -20,7 +20,7 @@ export interface MenuButtonOpen {
   setOpen: (value: Boolean) => void;
 }
 
-export const NavBar = (): JSX.Element => {
+export const NavBar = () => {
 
   const isWide = useMedia({ maxWidth: "991px" });
 
@@ -57,7 +57,7 @@ export const NavBar = (): JSX.Element => {
   );
 };
 
-export const NavLinks = (): JSX.Element => {
+export const NavLinks = () => {
   return (
     <NavbarLinks>
       <Button type="btLink" as="a" color="grey4" href={`#home`}>
