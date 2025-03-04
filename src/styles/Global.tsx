@@ -92,7 +92,7 @@ export const globalStyles = globalCss({
   a: { textDecoration: "none" },
 });
 
-export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
+export const GlobalStyle = ({ children }: GlobalStyleProps) => {
 
   const theme = createTheme({
     colors: {

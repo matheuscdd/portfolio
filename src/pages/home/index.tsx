@@ -30,7 +30,7 @@ import devImg from "../../public/static/img/logo/dev_profile.png";
 import { About } from "@/components/About";
 import { Segment } from "@/components/Segment";
 
-export const Home = (): JSX.Element => {
+export const Home = () => {
   const github = `https://github.com/${userData.githubUser}`;
 
   return (

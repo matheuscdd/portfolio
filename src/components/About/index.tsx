@@ -4,7 +4,7 @@ import { AboutWrapper, TextWrapper } from "./style";
 import { userData } from "@/utils/userData";
 
 
-export const About = (): JSX.Element => {
+export const About = () => {
   return (
     <AboutWrapper id="about">
       <Container>

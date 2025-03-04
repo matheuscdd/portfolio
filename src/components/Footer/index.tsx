@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaInstagram, FaFacebookF } from "react-icons/fa";
 import { Button } from "@/styles/Buttons";
 
 
-export const Footer = (): JSX.Element => {
+export const Footer = () => {
   return (
     <FooterWrapper id="social-media">
       <Container>

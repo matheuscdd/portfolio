@@ -9,19 +9,19 @@ interface SegmentProps {
   title: string;
   color: iVariant,
   stacks: iSegment,
+  key: number
 }
 
 export const Segment = (
-  { title, stacks, color }: SegmentProps,
-  key: number
-): JSX.Element => {
+  { title, stacks, color, key }: SegmentProps,
+) => {
   return (
     <SegmentList key={key} type={color}>
         <Container>
           <Text color="grey4" type="heading3">{title}</Text>
           <StackCards>
             {stacks.map(stack => (
-              <Stack key={stack.title} title={stack.title} icon={stack.icon} />
+              <Stack key={Math.random()} title={stack.title} icon={stack.icon} />
             ))}
           </StackCards>
       </Container>

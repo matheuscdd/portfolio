@@ -22,7 +22,7 @@ interface ReposType {
   homepage: string;
 }
 
-export const Project = (): JSX.Element => {
+export const Project = () => {
   const [repositories, setRepositories] = useState<ReposType[]>([]);
   useEffect(() => {
     const fetchData = async () => {
