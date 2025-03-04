@@ -14,6 +14,11 @@ import {
   SiGithubactions,
   SiPandas,
   SiLetsencrypt,
+  SiPlotly,
+  SiChartdotjs,
+  SiJquery,
+  SiVuetify,
+  SiNestjs,
 } from "react-icons/si";
 import {
   GrUbuntu
@@ -29,6 +34,7 @@ import {
   FaGitAlt,
   FaDocker,
   FaRobot,
+  FaPalette,
 } from "react-icons/fa";
 import { BiLogoMongodb } from "react-icons/bi";
 import { VscTerminalLinux } from "react-icons/vsc";
@@ -48,7 +54,11 @@ import {
   TbBrandLaravel,
   TbBrandGolang,
 } from "react-icons/tb";
-import { FaFlaskVial, FaServer } from "react-icons/fa6";
+import { 
+  FaFlaskVial,
+  FaServer,
+  FaBootstrap
+} from "react-icons/fa6";
 import { TiKey } from "react-icons/ti";
 
 export const languages: iSegment = Object.freeze([
@@ -72,6 +82,7 @@ export const dbs: iSegment = Object.freeze([
 
 export const frameworks: iSegment = Object.freeze([
   { title: "Node", icon: Node },
+  { title: "Nest", icon: SiNestjs },
   { title: "Laravel", icon: TbBrandLaravel },
   { title: "Vue", icon: RiVuejsFill },
   { title: "React", icon: FaReact },
@@ -93,15 +104,21 @@ export const complementary: iSegment = Object.freeze([
   { title: "Git", icon: FaGitAlt },
   { title: "GitHub", icon: FaGithub },
   { title: "Selenium", icon: SiSelenium  },
+  { title: "JQuery", icon: SiJquery },
+  { title: "Bootstrap", icon: FaBootstrap }, 
   { title: "Prisma ORM", icon: SiPrisma },
   { title: "TypeORM", icon: SiTypeorm },
+  { title: "Plotly.js", icon: SiPlotly },  
+  { title: "Chart.js", icon: SiChartdotjs }, 
   { title: "Pandas", icon: SiPandas },  
   { title: "GNU Gettext", icon: BsTranslate  },
   { title: "Styled Components", icon: styled },
+  { title: "Vuetify", icon: SiVuetify },
   { title: "Jest", icon: jest },
   { title: "Zod", icon: RiVipDiamondFill },
   { title: "Photoshop", icon: SiAdobephotoshop  },
   { title: "Photopea", icon: SiPhotopea },
+  { title: "Canvas HTML", icon: FaPalette }, 
   { title: "Testes Automatizados", icon: FaFlaskVial },
   { title: "Microserviços", icon: FaServer },
   { title: "Geração de PDFs Estilizados e Automatizados", icon: BsFillFileEarmarkPdfFill  },
