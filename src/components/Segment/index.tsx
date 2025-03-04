@@ -5,7 +5,7 @@ import { iSegment } from "@/utils/types";
 import { Stack } from "../Stack";
 import { Container } from "@/styles/Global";
 
-interface SegmentProps {
+type SegmentProps = {
   title: string;
   color: iVariant,
   stacks: iSegment,
@@ -21,7 +21,7 @@ export const Segment = (
           <Text color="grey4" type="heading3">{title}</Text>
           <StackCards>
             {stacks.map(stack => (
-              <Stack key={Math.random()} title={stack.title} icon={stack.icon} />
+              <Stack key={Math.random()} title={stack.title} icon={stack.icon} color={stack.color} filter={stack.filter}/>
             ))}
           </StackCards>
       </Container>
