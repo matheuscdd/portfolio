@@ -6,8 +6,14 @@ import {
   SiExpress,
   SiPhotopea,
   SiAdobephotoshop, 
-  SiJson,
-  SiPhp
+  SiPhp,
+  SiPrisma,
+  SiTypeorm, 
+  SiSelenium,
+  SiGnubash,
+  SiGithubactions,
+  SiPandas,
+  SiLetsencrypt,
 } from "react-icons/si";
 import {
   GrUbuntu
@@ -19,40 +25,86 @@ import {
   FaJs,
   FaGithub,
   FaReact,
-  FaGitAlt
+  FaAws,
+  FaGitAlt,
+  FaDocker,
+  FaRobot,
 } from "react-icons/fa";
+import { BiLogoMongodb } from "react-icons/bi";
 import { VscTerminalLinux } from "react-icons/vsc";
 import { RiVuejsFill, RiVipDiamondFill } from "react-icons/ri";
 import Postgles from "../public/static/img/stacks/postgles.svg";
 import Node from "../public/static/img/stacks/node.svg";
 import styled from "../public/static/img/stacks/styled.svg";
 import jest from "../public/static/img/stacks/jest.svg";
-import c_sharp from "../public/static/img/stacks/c_sharp.svg";
+import s3 from "../public/static/img/stacks/s3.svg";
+import { 
+  BsTranslate, 
+  BsFillFileEarmarkPdfFill 
+} from "react-icons/bs";
+import { iSegment } from "./types";
+import { IoIosMail } from "react-icons/io";
+import { 
+  TbBrandLaravel,
+  TbBrandGolang,
+} from "react-icons/tb";
+import { FaFlaskVial, FaServer } from "react-icons/fa6";
+import { TiKey } from "react-icons/ti";
 
-export const stackData = [
-  { title: "HTML", img: FaHtml5 },
-  { title: "CSS", img: FaCss3Alt },
-  { title: "JavaScript", img: FaJs },
-  { title: "TypeScript", img: SiTypescript },
-  { title: "Python", img: FaPython },
-  // { title: "C#", img: c_sharp },
-  // { title: "PHP", img:  SiPhp },
-  { title: "Scratch", img: SiScratch },
-  { title: "Node", img: Node },
-  { title: "React", img: FaReact },
-  { title: "Express", img: SiExpress },
-  // { title: "Vue", img: RiVuejsFill },
-  { title: "Django", img: SiDjango },
-  { title: "PostgreSQL", img: Postgles },
-  { title: "Sqlite", img: SiSqlite },
-  { title: "Git", img: FaGitAlt },
-  { title: "GitHub", img: FaGithub },
-  { title: "JSON", img: SiJson },
-  { title: "WSL", img: VscTerminalLinux },
-  { title: "Ubuntu", img: GrUbuntu },
-  { title: "Styled Components", img: styled },
-  { title: "Jest", img: jest },
-  { title: "Zod", img: RiVipDiamondFill },
-  { title: "Photoshop", img: SiAdobephotoshop  },
-  { title: "Photopea", img: SiPhotopea },
-];
+export const languages: iSegment = Object.freeze([
+  { title: "HTML", icon: FaHtml5 },
+  { title: "CSS", icon: FaCss3Alt },
+  { title: "JavaScript", icon: FaJs },
+  { title: "TypeScript", icon: SiTypescript },
+  { title: "Python", icon: FaPython },
+  { title: "Go", icon: TbBrandGolang },
+  { title: "PHP", icon:  SiPhp },
+  { title: "ShellScript", icon: SiGnubash  },
+  { title: "Scratch", icon: SiScratch },
+]);
+
+export const dbs: iSegment = Object.freeze([
+  { title: "PostgreSQL", icon: Postgles },
+  { title: "MongoDB", icon:  BiLogoMongodb },
+  { title: "S3", icon:  s3 },
+  { title: "Sqlite", icon: SiSqlite },
+]);
+
+export const frameworks: iSegment = Object.freeze([
+  { title: "Node", icon: Node },
+  { title: "Laravel", icon: TbBrandLaravel },
+  { title: "Vue", icon: RiVuejsFill },
+  { title: "React", icon: FaReact },
+  { title: "Express", icon: SiExpress },
+  { title: "Django", icon: SiDjango },
+]);
+
+export const infrastructure: iSegment = Object.freeze([
+  { title: "Docker", icon:  FaDocker  },
+  { title: "AWS", icon: FaAws },
+  { title: "Linux", icon: VscTerminalLinux },
+  { title: "Ubuntu", icon: GrUbuntu },
+  { title: "Github Actions CI/CD", icon: SiGithubactions  },
+  { title: "SSH", icon:  TiKey  },
+  { title: "Certbot SSL", icon: SiLetsencrypt },
+]);
+
+export const complementary: iSegment = Object.freeze([
+  { title: "Git", icon: FaGitAlt },
+  { title: "GitHub", icon: FaGithub },
+  { title: "Selenium", icon: SiSelenium  },
+  { title: "Prisma ORM", icon: SiPrisma },
+  { title: "TypeORM", icon: SiTypeorm },
+  { title: "Pandas", icon: SiPandas },  
+  { title: "GNU Gettext", icon: BsTranslate  },
+  { title: "Styled Components", icon: styled },
+  { title: "Jest", icon: jest },
+  { title: "Zod", icon: RiVipDiamondFill },
+  { title: "Photoshop", icon: SiAdobephotoshop  },
+  { title: "Photopea", icon: SiPhotopea },
+  { title: "Testes Automatizados", icon: FaFlaskVial },
+  { title: "Microserviços", icon: FaServer },
+  { title: "Geração de PDFs Estilizados e Automatizados", icon: BsFillFileEarmarkPdfFill  },
+  { title: "Automatizações de Emails", icon: IoIosMail },
+  { title: "Automatizações de Scripts Crontab", icon:  FaRobot  },
+]);

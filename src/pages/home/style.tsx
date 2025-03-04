@@ -80,30 +80,17 @@ export const UserImage = styled("img", {
 
 export const StackSection = styled("div", {
   backgroundColor: "$grey1",
-  padding: "4rem 0 2rem 0",
   marginTop: "6rem",
   borderBottom: "2px solid $grey5",
   borderTop: "2px solid $grey5",
-  paddingBottom: "4rem",
-  "@tablet": {
-    marginTop: "5rem",
-  },
-  "@mobile": {
-    marginTop: "0rem",
-    paddingTop: "0"
-  },
-  "@mobileLittle": {
-    marginTop: "0rem",
-    paddingTop: "0"
-  },
 });
 
 export const StackCards = styled("div", {
   display: "grid",
   gridTemplateColumns: "1fr 1fr 1fr 1fr",
-  padding: "3rem 0",
+  padding: "1rem 0 3rem 0",
   gap: "6rem",
-  marginTop: "$4",
+  marginTop: "1rem",
 
   "@tablet": {
     gridTemplateColumns: "1fr 1fr 1fr",

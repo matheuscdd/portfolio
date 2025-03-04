@@ -5,7 +5,6 @@ import { IconType } from "react-icons/lib";
 interface StackProps {
   title: string;
   icon: string | IconType;
-  key: number;
 }
 
 export const Stack = (

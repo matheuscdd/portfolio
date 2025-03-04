@@ -4,13 +4,12 @@ import { Text } from "@/styles/Text";
 import { Button } from "@/styles/Buttons";
 
 // Components
-import { Stack } from "@/components/Stack";
 import { Project } from "@/components/Project";
 import { Contacts } from "@/components/Contacts";
 
 // Data
-import { stackData } from "@/utils/stackData";
 import { userData } from "@/utils/userData";
+import * as stacksData from "@/utils/stackData";
 
 import { FaGithub } from "react-icons/fa";
 
@@ -20,7 +19,6 @@ import {
   HeaderContent,
   HeaderButtonsArea,
   UserImage,
-  StackCards,
   StackSection,
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
@@ -30,9 +28,10 @@ import {
 
 import devImg from "../../public/static/img/logo/dev_profile.png";
 import { About } from "@/components/About";
+import { Segment } from "@/components/Segment";
 
 export const Home = (): JSX.Element => {
-  const gihubUrl = `https://github.com/${userData.githubUser}`;
+  const github = `https://github.com/${userData.githubUser}`;
 
   return (
     <main id="home">
@@ -60,13 +59,13 @@ export const Home = (): JSX.Element => {
               </Text>
             </Text>
             <Text type="body1" color="grey2">
-              Conheça mais sobre os as minhas produções
+              Conheça mais sobre as minhas produções
             </Text>
             <HeaderButtonsArea>
               <Button as="a" type="primary" href="#projects">
                 Projetos
               </Button>
-              <Button as="a" type="outline" target="_blank" href="https://drive.google.com/file/d/16xiU1HTK6l_ZLQastX8dNaVkMxzThNoj/view?usp=sharing">
+              <Button as="a" type="outline" target="_blank" href="https://drive.google.com/file/d/177AI8qJce7K21T_8r1TFzuNuTpnr0lsh/view?usp=sharing">
                 Curriculum
               </Button>
               <Button
@@ -75,7 +74,7 @@ export const Home = (): JSX.Element => {
                 css={{ "&:hover": { color: "$grey1" } }}
                 type="circle"
                 target="_blank"
-                href={gihubUrl}
+                href={github}
               >
                 <FaGithub />
               </Button>
@@ -84,13 +83,36 @@ export const Home = (): JSX.Element => {
           </HeaderContent>
         </Container>
         <StackSection>
-                <Container>
-                  <StackCards>
-                    {stackData.map((stack, index) => (
-                      <Stack key={index} title={stack.title} icon={stack.img} />
-                    ))}
-                  </StackCards>
-                </Container>
+            <Segment
+              key={0}
+              title="Linguagens"
+              color="grey6"
+              stacks={stacksData.languages}
+            />
+            <Segment
+              key={1}
+              title="Frameworks"
+              color="grey7"
+              stacks={stacksData.frameworks}
+            />
+            <Segment
+              key={2}
+              title="Bancos de dados"
+              color="grey8"
+              stacks={stacksData.dbs}
+            />
+            <Segment
+              key={3}
+              title="Infraestrutura"
+              color="grey9"
+              stacks={stacksData.infrastructure}
+            />
+            <Segment
+              key={4}
+              title="Tecnologias Complementares"
+              color="grey10"
+              stacks={stacksData.complementary}
+            />
         </StackSection>
       </Header>
       <ProjectsArea id="projects">
