@@ -64,6 +64,18 @@ export const colors = {
     grey6: {
       color: "$grey6",
     },
+    grey7: {
+      color: "$grey7",
+    },
+    grey8: {
+      color: "$grey8",
+    },
+    grey9: {
+      color: "$grey9",
+    },
+    grey10: {
+      color: "$grey10",
+    },
   },
 };
 
@@ -94,6 +106,10 @@ export const GlobalStyle = ({ children }: GlobalStyleProps): JSX.Element => {
       grey4: "#F8F9FA",
       grey5: "#F8F9FA",
       grey6: "#343434",
+      grey7: "#292929",
+      grey8: "#1F1F1F",
+      grey9: "#191919",
+      grey10: "#121212",
 
       socialInstagram: "#CF50AC",
       socialFacebook: "#506CCF",
