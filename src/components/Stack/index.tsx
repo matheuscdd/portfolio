@@ -1,26 +1,25 @@
 import { StackCard } from "./style";
 import { Text } from "@/styles/Text";
-import { IconType } from "react-icons/lib";
+import { iStack } from "@/utils/types";
 
-interface StackProps {
-  title: string;
-  icon: string | IconType;
+type StackProps = iStack & {
   key: number
 }
 
 export const Stack = (
-  { title, icon: Icon, key }: StackProps,
+  { title, icon: Icon, key, color, filter }: StackProps,
+
 ) => {
   const isString = typeof Icon === "string";
-
+  const hover = { color, filter: `drop-shadow(0 0 0.3rem ${color}) ${filter}` };
   return (
-    <StackCard key={key}>
-      <Text>{title}</Text>
+    <StackCard key={key} css={{ '&:hover svg, &:hover img, &:hover p': hover }}>
       {isString ? (
-        <img src={Icon} alt={title} title={title} height="84px" width="84px" />
+        <img src={Icon} height="84px" width="84px" />
       ) : (
         <Icon size={84} color="#868E96" />
       )}
+      <Text color="grey3">{title}</Text>
     </StackCard>
   );
 };
