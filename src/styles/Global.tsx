@@ -1,7 +1,7 @@
 import { createTheme, globalCss, styled } from "@stitches/react";
 import { ReactNode } from "react";
 
-interface GlobalStyleProps {
+type GlobalStyleProps = {
   children: ReactNode;
 }
 

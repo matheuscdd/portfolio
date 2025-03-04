@@ -15,7 +15,7 @@ import { IoClose } from "react-icons/io5";
 import { Button } from "@/styles/Buttons";
 import { Container, Flex } from "@/styles/Global";
 
-export interface MenuButtonOpen {
+export type MenuButtonOpen = {
   open: Boolean;
   setOpen: (value: Boolean) => void;
 }

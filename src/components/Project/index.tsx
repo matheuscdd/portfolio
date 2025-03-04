@@ -10,10 +10,10 @@ import {
 import { Text } from "@/styles/Text";
 import { useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import { MdPreview } from "react-icons/md";
+import { FaEye } from "react-icons/fa6";
 import { userData } from "@/utils/userData";
 
-interface ReposType {
+type iRepos = {
   id: number;
   name: string;
   language: string;
@@ -23,17 +23,17 @@ interface ReposType {
 }
 
 export const Project = () => {
-  const [repositories, setRepositories] = useState<ReposType[]>([]);
+  const [repositories, setRepositories] = useState<iRepos[]>([]);
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetch(
         `https://api.github.com/users/${userData.githubUser}/repos?sort=created&direction=desc`
       );
 
-      const json: ReposType[] = await data.json();
+      const json: iRepos[] = await data.json();
       const scratchRepos = ["amoung_us_da_redacao", "naruto_da_redacao"];
       const notUsed = ["coding"];
-      let repos: ReposType[] = json.map(repo => {
+      let repos: iRepos[] = json.map(repo => {
         if (scratchRepos.includes(repo.name)) {
           repo.language = "Scratch";
         }
@@ -104,7 +104,7 @@ export const Project = () => {
                   target="_blank"
                   href={repository.homepage}
                 >
-                  <MdPreview /> Demo
+                  <FaEye /> Demo
                 </ProjectLink>
               )}
             </ProjectLinks>
